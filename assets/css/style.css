@@ -55,6 +55,24 @@ body {
   margin-right: auto;
 }
 
+/* Quiz Card Styling */
+
+.quiz-card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.quiz-card legend {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.form-check {
+  margin-bottom: 0.5rem;
+}
+
 
 
 
