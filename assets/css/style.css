@@ -27,3 +27,9 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 }
 
+/* Hero Carousel Styling */
+
+.hero-carousel-img {
+  height: 420px;
+  object-fit: cover;
+}
