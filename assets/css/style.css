@@ -39,23 +39,23 @@ body {
 
 /* Hero and ContentSection Styling */
 
-.hero-section {
-  width: 100%;
+.section-block {
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 0.75rem;
 }
 
-.content-section {
+.section-muted {
+  background-color: #f8f9fa;
+}
+
+.section-narrow {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.content-section h2 {
-  border-bottom: 2px solid #dee2e6;
-  padding-bottom: 0.5rem;
-}
 
-body {
-  background-color: #fff5f5;
-}
+
 
 
