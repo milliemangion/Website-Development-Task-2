@@ -42,12 +42,144 @@
 </header>
 
 <main id="main-content" class="container py-4">
-  <h1 class="display-5 mb-3">Travel Quiz</h1>
-  <p>Answer a few questions and I’ll suggest a destination.</p>
-  
-  <div class="border rounded p-3">
-    <p class="mb-0">Quiz coming soon.</p>
-  </div>
+ <div class="container py-4">
+
+  <h1 class="display-5 mb-4">Find Your Ideal Destination</h1>
+  <p class="lead">Answer the questions below to see what kind of traveller you are.</p>
+
+  <form id="travelQuiz">
+
+    <!-- We use the same pattern for all questions -->
+
+    <fieldset class="mb-4">
+      <legend class="h5">1. What pace do you prefer?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" value="city">
+        <label class="form-check-label">Fast and busy</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q1" value="relax">
+        <label class="form-check-label">Slow and relaxed</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">2. What do you enjoy most?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="culture">
+        <label class="form-check-label">Museums & history</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q2" value="food">
+        <label class="form-check-label">Food & cafés</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">3. Preferred transport?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="walk">
+        <label class="form-check-label">Walking & cycling</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q3" value="public">
+        <label class="form-check-label">Public transport</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">4. Accommodation style?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="budget">
+        <label class="form-check-label">Budget-friendly</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q4" value="comfort">
+        <label class="form-check-label">Comfortable hotels</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">5. Ideal activity?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="explore">
+        <label class="form-check-label">Exploring neighbourhoods</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q5" value="relax">
+        <label class="form-check-label">Relaxing and people-watching</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">6. Travel companion?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="solo">
+        <label class="form-check-label">Solo</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q6" value="group">
+        <label class="form-check-label">Friends or partner</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">7. Photography style?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="urban">
+        <label class="form-check-label">Urban landscapes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q7" value="scenic">
+        <label class="form-check-label">Scenic views</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">8. Weather preference?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="mild">
+        <label class="form-check-label">Mild & cool</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q8" value="warm">
+        <label class="form-check-label">Warm & sunny</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">9. Budget?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="low">
+        <label class="form-check-label">Low</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q9" value="medium">
+        <label class="form-check-label">Medium</label>
+      </div>
+    </fieldset>
+
+    <fieldset class="mb-4">
+      <legend class="h5">10. Trip goal?</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" value="culture">
+        <label class="form-check-label">Cultural experience</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="q10" value="relax">
+        <label class="form-check-label">Relaxation</label>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">See Result</button>
+    <button type="reset" class="btn btn-secondary ms-2">Reset</button>
+
+  </form>
+
+  <div id="quizResult" class="alert alert-info mt-4 d-none"></div>
+
+</div>
+
 </main>
 
 
@@ -61,7 +193,7 @@
 <!-- Bootstrap JS Bundle (CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Your JS -->
+<!-- JS -->
 <script src="assets/js/main.js"></script>
 </body>
 </html>
