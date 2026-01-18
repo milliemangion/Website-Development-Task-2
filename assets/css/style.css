@@ -219,4 +219,6 @@ p {
   background-color: var(--white);
   border-radius: 1.25rem;
   border: 1px solid var(--beige);
+  padding: 1.75rem 2rem;
 }
+
