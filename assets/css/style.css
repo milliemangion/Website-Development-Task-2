@@ -1,10 +1,50 @@
-/* Basic site styling */
+/* Fonts */
 
-body {
-  line-height: 1.5;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/agrandir");
+
+/* Main colours and fonts */
+
+:root {
+  --beige: #CFB7A0;
+  --brown: #50443A;
+  --pink-light: #F5B6D4;
+  --pink-strong: #E91B72;
+  --white: #FFFFFF;
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Agrandir", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Helps skip-link appear when tabbing */
+/* Typography */
+
+body {
+  font-family: var(--font-body);
+  color: var(--brown);
+background-color: #f6f1ec;
+
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--brown);
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Accessibility */
 
 .visually-hidden-focusable:active,
 .visually-hidden-focusable:focus {
@@ -14,40 +54,138 @@ body {
   margin: 1rem;
 }
 
-/* Card formatting */
+/* Navbar */
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
+.navbar {
+  background-color: var(--white) !important;
 }
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--brown);
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  color: var(--brown);
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: var(--pink-strong) !important;
+}
+
+.section-soft h2 {
+  color: var(--brown);
+}
+
+.navbar {
+  background-color: var(--white) !important;
+  border-bottom: 1px solid rgba(80, 68, 58, 0.15);
+}
+
+
+/* Buttons */
+
+.btn-primary {
+  background-color: var(--pink-strong);
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #c9155f;
+}
+
+.btn-outline-primary {
+  border: 2px solid var(--pink-strong);
+  color: var(--pink-strong);
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--pink-strong);
+  color: var(--white);
+}
+
+.btn-primary {
+  box-shadow: 0 0.25rem 0.75rem rgba(233, 27, 114, 0.25);
+}
+
+
+/* Forms */
+
+.form-control {
+  border-radius: 999px;
+  border: 2px solid var(--beige);
+  padding: 0.6rem 1.2rem;
+}
+
+.form-control:focus {
+  border-color: var(--pink-strong);
+  box-shadow: none;
+}
+
+/* Cards */
 
 .card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1.5rem rgba(80, 68, 58, 0.08);
 }
+
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
 }
 
-/* Hero Carousel Styling */
+.card-title {
+  font-family: var(--font-heading);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Hero carousel */
 
 .hero-carousel-img {
   height: 420px;
   object-fit: cover;
 }
 
-/* Hero and ContentSection Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--pink-light);
+  border-radius: 50%;
+  padding: 1.2rem;
+}
+
+/* Section layout helpers */
 
 .section-block {
   padding: 3rem 2rem;
   margin-bottom: 3rem;
   border-radius: 0.75rem;
+  background-color: rgba(207, 183, 160, 0.25);
 }
+
 
 .section-muted {
   background-color: #f8f9fa;
 }
+
+.section-soft h2 {
+  color: var(--brown);
+}
+
 
 .section-narrow {
   max-width: 900px;
@@ -55,25 +193,7 @@ body {
   margin-right: auto;
 }
 
-/* Quiz Card Styling */
-
-.quiz-card {
-  border: 1px solid #dee2e6;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  background-color: #ffffff;
-}
-
-.quiz-card legend {
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.form-check {
-  margin-bottom: 0.5rem;
-}
-
-/* Home Page Styling */
+/* Home page */
 
 .home-intro {
   max-width: 800px;
@@ -86,23 +206,17 @@ body {
   border-radius: 1rem;
 }
 
-.card img {
-  height: 220px;
-  object-fit: cover;
-}
-
-h2, h3 {
-  letter-spacing: 0.5px;
-}
-
-.btn-outline-primary {
-  border-width: 2px;
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: #E91B72;
 }
 
 
+/* Quiz */
 
-
-
-
-
-
+.quiz-card {
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  border: 1px solid var(--beige);
+}
