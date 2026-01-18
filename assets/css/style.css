@@ -26,11 +26,18 @@ background-color: #f6f1ec;
   line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2 {
+  font-family: var(--font-heading);
+  color: var(--pink-strong);
+  letter-spacing: 0.5px;
+}
+
+h3, h4, h5 {
   font-family: var(--font-heading);
   color: var(--brown);
   letter-spacing: 0.5px;
 }
+
 
 h1 {
   font-size: 3rem;
